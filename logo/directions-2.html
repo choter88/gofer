@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Gofer logo, round two</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F0EBE1;--paper-2:#F8F5EF;--ink:#17150F;--ink-3:#635E51;--rule:#CDC5B4;--accent:#9C3A1B;--accent-ink:#D9713F}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 13px/1.5 "Libre Franklin",Helvetica,Arial,sans-serif;padding:40px}
+h1{font:900 34px/1 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 6px}
+.lede{color:var(--ink-3);font:400 12px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;margin:0 0 30px}
+.dir{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--rule);align-items:start}
+.dir h2{font:900 25px/1.05 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 8px}
+.dir h2 small{display:block;font:500 10px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.dir p{color:var(--ink-3);font-size:12.5px;line-height:1.5;margin:0}
+.row{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap}
+.tile{display:grid;place-items:center;border:1px solid var(--rule);border-radius:3px;background:var(--paper-2);color:var(--ink)}
+.tile.dark{background:var(--ink);color:var(--paper);border-color:var(--ink);--accent:#D9713F}
+.tile.mono{--accent:currentColor}
+.tile.big{width:150px;height:150px}.tile.big svg{width:104px;height:104px}
+.tile.md{width:72px;height:72px}.tile.md svg{width:48px;height:48px}
+.tile.sm{width:44px;height:44px}.tile.sm svg{width:24px;height:24px}
+.tile.xs{width:32px;height:32px}.tile.xs svg{width:16px;height:16px}
+.lock{display:flex;align-items:center;gap:.3em;font:900 64px/1 Fraunces,Georgia,serif;letter-spacing:-.025em;font-variation-settings:"opsz" 144;margin-top:20px}
+.lock svg{height:.9em;width:.9em}
+.lock .dot{color:var(--accent)}
+svg{display:block}
+.st{fill:none;stroke:currentColor;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:6}
+.ah{fill:currentColor}
+.home{fill:var(--accent)}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- D: leaves home, loops, returns -->
+  <symbol id="d" viewBox="0 0 32 32">
+    <circle class="home" cx="8.5" cy="23.5" r="3.1"/>
+    <path class="st" d="M9.6 19.4C9.2 9.5 17 4.6 23 7c7 2.8 6.6 13.2 1 17.4-2.5 1.9-6 2.4-9.6 1.9"/>
+    <path class="ah" d="M12.1 25.8l6.4-4.4.6 8.6z"/>
+  </symbol>
+
+  <!-- E: the G whose bar comes back in -->
+  <symbol id="e" viewBox="0 0 32 32">
+    <path class="st" style="stroke-width:5" d="M22.9 7.7A10.5 10.5 0 1 0 26.3 17.8H19.4"/>
+    <path class="ah" d="M12.6 17.8l7.2-5.2v10.4z"/>
+  </symbol>
+
+  <!-- F: out over the top, back as a check -->
+  <symbol id="f" viewBox="0 0 32 32">
+    <circle class="home" cx="6.6" cy="16" r="3.1"/>
+    <path class="st" d="M7.8 11.6C9.6 4.2 24.6 3 26 11.4L15.6 25 9.7 18.9"/>
+  </symbol>
+
+  <!-- G: there and back -->
+  <symbol id="g" viewBox="0 0 32 32">
+    <circle class="home" cx="6" cy="10.5" r="3.1"/>
+    <path class="st" d="M10.6 10.5H21a5.5 5.5 0 0 1 0 11h-8"/>
+    <path class="ah" d="M6.6 21.5l6.6-4.6v9.2z"/>
+  </symbol>
+</svg>
+
+<h1>Gofer logo, round two</h1>
+<p class="lede">The errand, not the animal. Ink and rust, then one color, at 104 / 48 / 24 / 16 px</p>
+
+<div class="dir">
+  <div><h2><small>Direction D</small>Leaves, loops, returns</h2><p>Home is the rust dot, the same dot that ends the wordmark. The stroke goes out on the errand and comes back to where it started.</p></div>
+  <div>
+    <div class="row">
+      <div class="tile big"><svg><use href="#d"/></svg></div>
+      <div class="tile big dark"><svg><use href="#d"/></svg></div>
+      <div class="tile md mono"><svg><use href="#d"/></svg></div>
+      <div class="tile sm mono"><svg><use href="#d"/></svg></div>
+      <div class="tile xs mono"><svg><use href="#d"/></svg></div>
+      <div class="tile xs dark mono"><svg><use href="#d"/></svg></div>
+    </div>
+    <div class="lock"><svg><use href="#d"/></svg>Gofer<span class="dot">.</span></div>
+  </div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction E</small>The G that comes back in</h2><p>A G is already a stroke that circles round and turns inward. Here the bar is an arrow returning to the center. Monogram and errand in one.</p></div>
+  <div>
+    <div class="row">
+      <div class="tile big"><svg><use href="#e"/></svg></div>
+      <div class="tile big dark"><svg><use href="#e"/></svg></div>
+      <div class="tile md mono"><svg><use href="#e"/></svg></div>
+      <div class="tile sm mono"><svg><use href="#e"/></svg></div>
+      <div class="tile xs mono"><svg><use href="#e"/></svg></div>
+      <div class="tile xs dark mono"><svg><use href="#e"/></svg></div>
+    </div>
+    <div class="lock"><svg><use href="#e"/></svg>Gofer<span class="dot">.</span></div>
+  </div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction F</small>Out, and back as done</h2><p>From home, over the top, and the return stroke lands as a check. Sent, then finished, in one line.</p></div>
+  <div>
+    <div class="row">
+      <div class="tile big"><svg><use href="#f"/></svg></div>
+      <div class="tile big dark"><svg><use href="#f"/></svg></div>
+      <div class="tile md mono"><svg><use href="#f"/></svg></div>
+      <div class="tile sm mono"><svg><use href="#f"/></svg></div>
+      <div class="tile xs mono"><svg><use href="#f"/></svg></div>
+      <div class="tile xs dark mono"><svg><use href="#f"/></svg></div>
+    </div>
+    <div class="lock"><svg><use href="#f"/></svg>Gofer<span class="dot">.</span></div>
+  </div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction G</small>There and back</h2><p>Two lanes and a turn. The plainest of the four: an errand is a round trip, and this is the diagram of one.</p></div>
+  <div>
+    <div class="row">
+      <div class="tile big"><svg><use href="#g"/></svg></div>
+      <div class="tile big dark"><svg><use href="#g"/></svg></div>
+      <div class="tile md mono"><svg><use href="#g"/></svg></div>
+      <div class="tile sm mono"><svg><use href="#g"/></svg></div>
+      <div class="tile xs mono"><svg><use href="#g"/></svg></div>
+      <div class="tile xs dark mono"><svg><use href="#g"/></svg></div>
+    </div>
+    <div class="lock"><svg><use href="#g"/></svg>Gofer<span class="dot">.</span></div>
+  </div>
+</div>
+
+</body></html>

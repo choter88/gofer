@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Gofer logo, round six</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F0EBE1;--paper-2:#F8F5EF;--ink:#17150F;--ink-3:#635E51;--rule:#CDC5B4;--accent:#9C3A1B;--accent-ink:#D9713F}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 13px/1.5 "Libre Franklin",Helvetica,Arial,sans-serif;padding:40px}
+h1{font:900 34px/1 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 6px}
+.lede{color:var(--ink-3);font:400 12px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;margin:0 0 30px}
+.dir{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:26px 0;border-top:1px solid var(--rule);align-items:start}
+.dir h2{font:900 25px/1.05 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 8px}
+.dir h2 small{display:block;font:500 10px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.dir p{color:var(--ink-3);font-size:12.5px;line-height:1.5;margin:0}
+.row{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+.tile{display:grid;place-items:center;border:1px solid var(--rule);border-radius:3px;background:var(--paper-2);color:var(--ink)}
+.tile.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tile.rust{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.tile.big{width:150px;height:150px}.tile.big svg{width:104px;height:104px}
+.tile.md{width:72px;height:72px}.tile.md svg{width:48px;height:48px}
+.tile.sm{width:44px;height:44px}.tile.sm svg{width:24px;height:24px}
+.tile.xs{width:32px;height:32px}.tile.xs svg{width:16px;height:16px}
+.lock{display:flex;align-items:center;gap:.3em;font:900 60px/1 Fraunces,Georgia,serif;letter-spacing:-.025em;font-variation-settings:"opsz" 144;margin-top:18px}
+.lock svg{height:.95em;width:.95em}.lock .dot{color:var(--accent)}
+svg{display:block;fill:currentColor}
+.st{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Q: service bell -->
+  <symbol id="q" viewBox="0 0 32 32">
+    <circle cx="16" cy="5.6" r="2.5"/>
+    <rect x="14.7" y="6.5" width="2.6" height="4.5"/>
+    <path d="M4.6 21.2a11.4 11.4 0 0 1 22.8 0Z"/>
+    <rect x="3" y="23" width="26" height="3" rx=".9"/>
+  </symbol>
+  <!-- R: typewriter key with the brand G -->
+  <symbol id="r" viewBox="0 0 32 32">
+    <path fill-rule="evenodd" d="M16 2.2a13.8 13.8 0 1 0 0 27.6 13.8 13.8 0 1 0 0-27.6Zm0 2.6a11.2 11.2 0 1 1 0 22.4 11.2 11.2 0 1 1 0-22.4Z"/>
+    <mask id="rk" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32"><rect width="32" height="32" fill="#fff"/><g fill="#000"><g transform="translate(16 16) scale(0.007032 -0.007032) translate(-789.0 -699.5)"><path d="M1401 38Q1401 -1 1382.0 -20.5Q1363 -40 1324 -40Q1291 -40 1263.5 -22.5Q1236 -5 1210.0 18.0Q1184 41 1160.5 58.5Q1137 76 1115 76Q1092 76 1063.0 58.5Q1034 41 993.5 18.5Q953 -4 895.5 -21.5Q838 -39 755 -39Q591 -39 462.0 13.0Q333 65 243.0 162.0Q153 259 106.0 394.5Q59 530 59 699Q59 858 114.5 993.0Q170 1128 269.5 1228.0Q369 1328 502.0 1383.5Q635 1439 791 1439Q891 1439 953.0 1423.0Q1015 1407 1053.0 1390.5Q1091 1374 1118 1374Q1147 1374 1166.0 1389.5Q1185 1405 1205.0 1420.5Q1225 1436 1255 1436Q1279 1436 1295.5 1420.0Q1312 1404 1322 1367L1425 1009Q1433 979 1417.0 955.0Q1401 931 1371 923Q1338 915 1310.5 927.5Q1283 940 1268 974Q1216 1097 1150.5 1164.5Q1085 1232 1011.5 1258.5Q938 1285 864 1285Q757 1285 681.0 1223.0Q605 1161 564.5 1046.5Q524 932 524 774Q524 573 572.0 438.0Q620 303 704.0 235.5Q788 168 896 168Q921 168 939.0 176.0Q957 184 969.0 197.0Q981 210 986.5 228.5Q992 247 992 269V497Q992 518 982.0 529.0Q972 540 941 549L896 562Q866 571 848.5 587.5Q831 604 831 629Q831 659 851.5 676.0Q872 693 915 693H1434Q1478 693 1498.5 676.0Q1519 659 1519 630Q1519 606 1506.5 591.0Q1494 576 1468 565L1445 556Q1425 548 1413.0 535.0Q1401 522 1401 497Z"/></g></g></mask>
+    <circle cx="16" cy="16" r="9.7" mask="url(#rk)"/>
+  </symbol>
+  <!-- S: interoffice envelope, string and button closure -->
+  <symbol id="s" viewBox="0 0 32 32">
+    <path class="st" d="M11.6 7.6c0 7 8.8 9.8 8.8 16.8s-8.8 6.4-8.8 0 8.8-9.8 8.8-16.8-8.8-6.4-8.8 0Z"/>
+    <path fill-rule="evenodd" d="M16 4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 1 0 0-7.2Zm0 2.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 1 1 0-2.4Z"/>
+    <path fill-rule="evenodd" d="M16 20.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 1 0 0-7.2Zm0 2.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 1 1 0-2.4Z"/>
+  </symbol>
+  <!-- T: the office bicycle -->
+  <symbol id="t" viewBox="0 0 32 32">
+    <circle class="st" cx="8.2" cy="21.2" r="6.2"/>
+    <circle class="st" cx="23.8" cy="21.2" r="6.2"/>
+    <path class="st" d="M8.2 21.2 13.4 10.6h7.2l3.2 10.6M13.4 10.6 16 20.4 20.6 10.6M11.2 9.4h4.4M19.8 8.4h4.2"/>
+    <circle cx="16" cy="20.6" r="1.7"/>
+  </symbol>
+</svg>
+
+<h1>Gofer logo, round six</h1>
+<p class="lede">Summon it, type it, route it, send it running</p>
+
+<div class="dir">
+  <div><h2><small>Direction Q</small>Ring for a Gofer</h2><p>The counter bell. You tap it and someone appears to take the job. No learning, no login, the whole pitch in one object. Old hotel desk, old front office, reads at any size.</p></div>
+  <div><div class="row">
+    <div class="tile big"><svg><use href="#q"/></svg></div><div class="tile big dark"><svg><use href="#q"/></svg></div>
+    <div class="tile md"><svg><use href="#q"/></svg></div><div class="tile sm"><svg><use href="#q"/></svg></div>
+    <div class="tile xs"><svg><use href="#q"/></svg></div><div class="tile xs dark"><svg><use href="#q"/></svg></div><div class="tile md rust"><svg><use href="#q"/></svg></div>
+  </div><div class="lock"><svg><use href="#q"/></svg>Gofer<span class="dot">.</span></div></div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction R</small>The typewriter key</h2><p>A round key with your own Fraunces G set into it. The machine that did paperwork before software did. Tactile, typographic, and a perfect favicon because it already is a button.</p></div>
+  <div><div class="row">
+    <div class="tile big"><svg><use href="#r"/></svg></div><div class="tile big dark"><svg><use href="#r"/></svg></div>
+    <div class="tile md"><svg><use href="#r"/></svg></div><div class="tile sm"><svg><use href="#r"/></svg></div>
+    <div class="tile xs"><svg><use href="#r"/></svg></div><div class="tile xs dark"><svg><use href="#r"/></svg></div><div class="tile md rust"><svg><use href="#r"/></svg></div>
+  </div><div class="lock"><svg><use href="#r"/></svg>Gofer<span class="dot">.</span></div></div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction S</small>String and button</h2><p>The closure on an interoffice envelope, the brown one that got passed desk to desk with a routing grid on the front. That envelope is what forwarding an email used to be. Nobody has claimed this shape.</p></div>
+  <div><div class="row">
+    <div class="tile big"><svg><use href="#s"/></svg></div><div class="tile big dark"><svg><use href="#s"/></svg></div>
+    <div class="tile md"><svg><use href="#s"/></svg></div><div class="tile sm"><svg><use href="#s"/></svg></div>
+    <div class="tile xs"><svg><use href="#s"/></svg></div><div class="tile xs dark"><svg><use href="#s"/></svg></div><div class="tile md rust"><svg><use href="#s"/></svg></div>
+  </div><div class="lock"><svg><use href="#s"/></svg>Gofer<span class="dot">.</span></div></div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction T</small>The office bicycle</h2><p>A gofer is a runner, and the runner's tool is the bike. Legwork, made literal. Friendly without being a face, and it says "goes and fetches" to anyone in any trade.</p></div>
+  <div><div class="row">
+    <div class="tile big"><svg><use href="#t"/></svg></div><div class="tile big dark"><svg><use href="#t"/></svg></div>
+    <div class="tile md"><svg><use href="#t"/></svg></div><div class="tile sm"><svg><use href="#t"/></svg></div>
+    <div class="tile xs"><svg><use href="#t"/></svg></div><div class="tile xs dark"><svg><use href="#t"/></svg></div><div class="tile md rust"><svg><use href="#t"/></svg></div>
+  </div><div class="lock"><svg><use href="#t"/></svg>Gofer<span class="dot">.</span></div></div>
+</div>
+</body></html>

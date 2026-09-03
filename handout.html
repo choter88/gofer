@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gofer | One-page handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=IBM+Plex+Mono:wght@400;500&family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* type and accent tokens from index.html; page is plain white so it prints on any stock */
+:root{
+  --paper:#FFFFFF;--panel:#F6F4EF;--panel-2:#EEEAE1;--ink:#17150F;--ink-2:#494437;--ink-3:#635E51;
+  --rule:#D3CDC1;--rule-soft:#E4DFD4;--accent:#9C3A1B;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@page{size:letter;margin:0}
+*,*::before,*::after{box-sizing:border-box}
+html{background:#bbb}
+body{margin:0;font:400 13px/1.5 var(--body);color:var(--ink);
+  -webkit-font-smoothing:antialiased;font-synthesis-weight:none;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;margin:0 auto;background:var(--paper);padding:.42in .55in;
+  display:flex;flex-direction:column;overflow:hidden}
+@media screen{.page{box-shadow:0 12px 40px -12px rgba(0,0,0,.5);margin:24px auto}}
+@media print{html{background:none}.page{margin:0;box-shadow:none}}
+h1,h2,h3,p,ul{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;line-height:1.04}
+svg{display:block}
+
+/* header: the name is the mark */
+.head{display:flex;align-items:baseline;gap:14px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.brand{font-family:var(--display);font-size:32px;font-weight:900;letter-spacing:-.025em;line-height:1;font-variation-settings:"opsz" 144}
+.brand span{color:var(--accent)}
+.note{font:400 10.5px/1 var(--mono);color:var(--ink-3);letter-spacing:.02em}
+.head .url{margin-left:auto;font:500 11px/1 var(--mono);color:var(--ink)}
+
+/* acts: a numbered rail leads the eye down the page */
+.act{padding-top:11px}
+.act-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.act-head .n{font-family:var(--display);font-weight:900;font-size:22px;line-height:1;color:var(--accent)}
+.act-head .lbl{font:500 9.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.act-head::after{content:"";flex:1;height:1px;background:var(--rule)}
+.act h2{font-size:30px;max-width:15ch}
+.sub{font-size:13px;line-height:1.45;color:var(--ink-2);margin-top:7px;max-width:34ch}
+
+/* act 1: the wall */
+.a1{display:grid;grid-template-columns:1fr 1.02fr;gap:32px;align-items:center}
+.wall{display:flex;align-items:center;gap:10px}
+.who-ic{text-align:center;flex:0 0 auto}
+.who-ic svg{width:34px;height:34px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 6px}
+.who-ic .t,.locked .t{font:500 8.5px/1.35 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.blocked svg{width:26px;height:26px;stroke:var(--ink-3);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.bricks{flex:1;display:grid;gap:2px;border-left:3px solid var(--ink);padding-left:7px}
+.bricks div{background:var(--panel-2);border:1px solid var(--rule);border-radius:1px;
+  padding:4.5px 6px 4.5px 8px;font:500 10px/1.15 var(--mono);color:var(--ink-2);
+  display:flex;align-items:center;justify-content:space-between;gap:6px}
+.brick-tag{flex:0 0 auto;font:600 6.8px/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;padding:2px 4.5px;border-radius:2px}
+.brick-tag.learn{color:var(--accent);border:1px solid var(--accent)}
+.brick-tag.build{color:var(--paper);background:var(--accent)}
+.locked{flex:0 0 auto;text-align:center;color:var(--ink-3)}
+.locked .box{width:56px;height:44px;border:1.5px dashed var(--rule);border-radius:2px;display:grid;place-items:center;margin-bottom:6px}
+.locked .box svg{width:19px;height:19px;stroke:var(--ink-3);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.locked .t{color:var(--ink-3)}
+
+/* act 2: the inbox */
+.a2{display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;align-items:stretch}
+.a2>div:first-child{display:flex;flex-direction:column}
+.flow{display:flex;align-items:center;gap:7px;margin-top:auto;padding-top:18px}
+.flow .node{flex:0 0 auto;font:500 8.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:8px 8px 7px;background:var(--paper)}
+.flow .node.g{background:var(--accent);color:var(--paper)}
+.flow .ar{flex:1;min-width:10px;height:1px;background:var(--accent);position:relative}
+.flow .ar::after{content:"";position:absolute;right:0;top:-3px;border-left:5px solid var(--accent);border-top:3.5px solid transparent;border-bottom:3.5px solid transparent}
+.pull{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.2;letter-spacing:-.01em;
+  color:var(--ink);border-left:3px solid var(--accent);padding-left:11px;margin-top:auto}
+.trust{margin-top:auto;padding-top:10px;border-top:1px solid var(--rule);font-size:12px;line-height:1.45;color:var(--ink-2)}
+.trust b{font-weight:700;color:var(--ink)}
+
+.thread{background:var(--panel);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.bar{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--rule);background:var(--panel-2)}
+.tag{font:500 8.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:4px 5px;border-radius:2px}
+.subj{font:500 11px/1.3 var(--body);flex:1}
+.msg{padding:5px 10px 6px;border-top:1px solid var(--rule-soft);font-size:11px}
+.msg:first-of-type{border-top:0}
+.msg.g{background:var(--paper)}
+.mh{display:flex;align-items:center;gap:7px;margin-bottom:4px}
+.av{flex:0 0 auto;width:20px;height:20px;border-radius:2px;background:var(--ink);color:var(--paper);font:500 8.5px/20px var(--mono);text-align:center}
+.av.g{background:var(--accent);font:900 13px/20px var(--display)}
+.who{flex:1;font-size:11px;font-weight:700}
+.time{font:400 9px/1 var(--mono);color:var(--ink-3)}
+.body{line-height:1.4}
+.clip{display:flex;width:fit-content;max-width:100%;align-items:center;gap:5px;margin-top:5px;border:1px solid var(--rule);
+  background:var(--paper);border-radius:2px;padding:4px 6px;font:400 9.5px/1 var(--mono);color:var(--ink-2)}
+.clip svg{width:11px;height:11px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.plan{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin-top:3px}
+.plan .k{font:500 8px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.plan .v{line-height:1.35}
+.plan ul{list-style:none;padding:0;display:grid;gap:2px}
+.plan li{position:relative;padding-left:9px}
+.plan li::before{content:"";position:absolute;left:0;top:.52em;width:3px;height:3px;background:var(--ink-3);border-radius:50%}
+.log{list-style:none;padding:6px 0 0;margin:6px 0 0;border-top:1px dashed var(--rule)}
+.log li{display:flex;gap:7px;font:400 9.5px/1.55 var(--mono);color:var(--ink-2)}
+.log .t{color:var(--accent);flex:0 0 auto}
+
+/* act 3: why me */
+.a3{display:grid;grid-template-columns:1fr 1.25fr;gap:32px;align-items:start}
+.a3 p{font-size:13px;line-height:1.5;color:var(--ink-2)}
+.a3 p+p{margin-top:7px}
+.a3 b{color:var(--ink);font-weight:700}
+.sig{margin-top:8px;padding-top:6px;border-top:1px solid var(--rule);display:flex;align-items:baseline;gap:9px}
+.sig .nm{font-family:var(--display);font-weight:700;font-size:17px}
+.sig .rl{font:400 10px/1 var(--mono);color:var(--ink-3)}
+
+/* footer: contact and the way in */
+.foot{margin-top:auto;padding-top:10px;border-top:2px solid var(--ink);display:flex;align-items:center;gap:24px}
+.foot .mono{font:500 13px/1.5 var(--mono);color:var(--ink)}
+.foot .mono span{display:block;font-size:10.5px;color:var(--ink-3);font-weight:400}
+.foot .qr{margin-left:auto;display:flex;align-items:center;gap:10px}
+.foot .qr svg{width:60px;height:60px;padding:4px;background:#fff;border:1px solid var(--rule)}
+.foot .qr .l{font:500 9px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:right}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="head">
+    <span class="brand">Gofer<span>.</span></span>
+    <span class="note">grunt work, by email</span>
+    <span class="url">tellgofer.com</span>
+  </header>
+
+  <!-- 01 THE PROBLEM -->
+  <section class="act">
+    <div class="act-head"><span class="n">01</span><span class="lbl">The problem</span></div>
+    <div class="a1">
+      <div>
+        <h2>Your staff isn't refusing AI.</h2>
+        <p class="sub">They're just being told to use tools that aren't designed for them.</p>
+      </div>
+      <div class="wall">
+        <div class="who-ic">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20.5a7.2 7.2 0 0 1 14.4 0"/></svg>
+          <div class="t">Your<br>staff</div>
+        </div>
+        <div class="blocked"><svg viewBox="0 0 24 24"><path d="M1 12h14"/><path d="M13.5 8l4 4-4 4"/></svg></div>
+        <div class="bricks">
+          <div>Agentic workflows<span class="brick-tag learn">Learn</span></div>
+          <div>Prompt engineering<span class="brick-tag learn">Learn</span></div>
+          <div>Custom integrations<span class="brick-tag build">Build</span></div>
+          <div>Multi-step automations<span class="brick-tag build">Build</span></div>
+        </div>
+        <div class="locked">
+          <div class="box"><svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="1.5"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7"/></svg></div>
+          <div class="t">The AI<br>you bought</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 THE FIX -->
+  <section class="act">
+    <div class="act-head"><span class="n">02</span><span class="lbl">The fix</span></div>
+    <div class="a2">
+      <div>
+        <h2>So we put it in a form they already know.</h2>
+        <p class="sub">No login, no training, and no new habits to learn. They email Gofer like they would an intern.</p>
+        <div class="flow">
+          <span class="node">Your staff</span><span class="ar"></span>
+          <span class="node">Their inbox</span><span class="ar"></span>
+          <span class="node g">Your Gofer</span>
+        </div>
+        <p class="pull">Work that used to take a script, a vendor, or a temp.</p>
+        <p class="trust"><b>Gofer understands what you need.</b> It learns as you use it and gets better at its job, but never asks for a promotion.</p>
+      </div>
+      <article class="thread">
+        <div class="bar"><span class="tag">Inbox</span><span class="subj">Fwd: This week's job tickets</span></div>
+        <div class="msg">
+          <div class="mh"><span class="av">DR</span><span class="who">Dana Ruiz</span><span class="time">7:41 AM</span></div>
+          <div class="body">All four crews, week of the 10th. Payroll sheet the usual way, and keep Rialto separate from Fontana. Fair warning, a few are a mess.
+            <span class="clip"><svg viewBox="0 0 24 24"><path d="m21 11.5-8.5 8.5a5 5 0 0 1-7-7l9-9a3.3 3.3 0 0 1 4.7 4.7l-9 9a1.7 1.7 0 0 1-2.4-2.4l8-8"/></svg>31 photos, 4 crews</span>
+          </div>
+        </div>
+        <div class="msg g">
+          <div class="mh"><span class="av g">G</span><span class="who">Gofer</span><span class="time">7:52 AM</span></div>
+          <div class="body">
+            <div class="plan">
+              <span class="k">Plan</span>
+              <div class="v"><ul>
+                <li>One row per person per day, your columns</li>
+                <li>Job number off the header, so Rialto and Fontana stay split</li>
+                <li>Overtime past 40 in its own column, like February</li>
+              </ul></div>
+              <span class="k">Assuming</span>
+              <div class="v">Saturday is straight time unless the ticket says so.</div>
+              <span class="k">Question</span>
+              <div class="v">Two are illegible, Alvarez Tuesday and Kim Thursday. Flag them, or hold the sheet?</div>
+            </div>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="mh"><span class="av">DR</span><span class="who">Dana Ruiz</span><span class="time">8:03 AM</span></div>
+          <div class="body">Flag them. Yes on Saturday.</div>
+        </div>
+        <div class="msg g">
+          <div class="mh"><span class="av g">G</span><span class="who">Gofer</span><span class="time">8:14 AM</span></div>
+          <div class="body">Done. 31 tickets in, 2 flagged.
+            <span class="clip"><svg viewBox="0 0 24 24"><path d="m21 11.5-8.5 8.5a5 5 0 0 1-7-7l9-9a3.3 3.3 0 0 1 4.7 4.7l-9 9a1.7 1.7 0 0 1-2.4-2.4l8-8"/></svg>Payroll_week_of_Mar_10.xlsx</span>
+            <ul class="log">
+              <li><span class="t">8:09</span>Totaled hours by person and job</li>
+              <li><span class="t">8:14</span>Matched your payroll columns. Filed</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 03 WHY ME -->
+  <section class="act">
+    <div class="act-head"><span class="n">03</span><span class="lbl">Why me</span></div>
+    <div class="a3">
+      <h2>I've built gofers my whole career.</h2>
+      <div>
+        <p>Twelve years as an engineer on RF and space hardware. Every job I had, I wrote scripts to take the grunt work off my plate. Gofer only wants to do the grunt work and fits into how people already work.</p>
+        <p><b>This doesn't replace your best people.</b> It gives them a smart, personal intern so they can do more of what makes them great.</p>
+        <div class="sig"><span class="nm">Peter Cho</span><span class="rl">Founder, Gofer</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="mono">hello@tellgofer.com<span>tellgofer.com</span></div>
+    <div class="qr"><span class="l">Join the<br>pilot</span><svg viewBox="0 0 25 25" shape-rendering="crispEdges" aria-label="QR code for tellgofer.com"><path stroke="#17150f" d="M0 0.5h7m3 0h2m1 0h1m4 0h7m-25 1h1m5 0h1m2 0h3m1 0h3m2 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m1 0h1m7 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m4 0h4m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m1 0h3m3 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h1m5 0h3m-17 1h1m1 0h5m2 0h3m1 0h3m2 0h5m-23 1h1m1 0h2m4 0h2m1 0h1m1 0h1m2 0h1m2 0h1m3 0h1m-22 1h1m1 0h5m2 0h1m1 0h3m1 0h2m2 0h1m1 0h2m-24 1h1m1 0h2m2 0h1m1 0h1m1 0h1m2 0h1m1 0h4m4 0h1m-23 1h1m1 0h1m1 0h2m2 0h1m1 0h4m1 0h4m1 0h3m-25 1h2m2 0h2m3 0h1m3 0h1m2 0h1m2 0h1m1 0h1m1 0h1m-24 1h1m1 0h2m1 0h2m4 0h2m1 0h4m1 0h3m1 0h2m-25 1h1m1 0h3m3 0h1m1 0h2m2 0h1m1 0h1m1 0h3m3 0h1m-25 1h1m1 0h1m3 0h1m3 0h2m1 0h1m2 0h5m1 0h1m-15 1h2m2 0h2m1 0h2m3 0h2m-22 1h7m6 0h2m1 0h1m1 0h1m1 0h1m1 0h3m-25 1h1m5 0h1m1 0h1m3 0h1m1 0h1m1 0h1m3 0h2m-22 1h1m1 0h3m1 0h1m1 0h1m3 0h1m2 0h6m1 0h3m-25 1h1m1 0h3m1 0h1m1 0h3m5 0h3m1 0h5m-25 1h1m1 0h3m1 0h1m1 0h2m1 0h2m8 0h2m1 0h1m-25 1h1m5 0h1m2 0h1m1 0h1m3 0h3m1 0h3m2 0h1m-25 1h7m1 0h2m1 0h2m5 0h7"/></svg></div>
+  </footer>
+
+</main>
+</body>
+</html>

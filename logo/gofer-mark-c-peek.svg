@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 37.5" width="224" height="300" fill="currentColor" style="color:#17150F">
+<defs><mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="37.5">
+      <rect width="28" height="37.5" fill="#fff"/>
+      <rect x="11.85" y="15.4" width="1.85" height="7" rx=".75" fill="#000"/>
+      <rect x="14.3" y="15.4" width="1.85" height="7" rx=".75" fill="#000"/>
+      <path d="M6 15.4 A8.85 8.2 0 0 0 22 15.4" fill="none" stroke="#000" stroke-width="1.1"/>
+    </mask></defs>
+    <g mask="url(#m)">
+      <path fill-rule="evenodd" d="M14 12.5c6.9 0 12.5 5.6 12.5 12.5S20.9 37.5 14 37.5 1.5 31.9 1.5 25 7.1 12.5 14 12.5Z M14 18.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 1 0 0-12.4Z"/>
+      <circle cx="6.1" cy="10.4" r="2.3"/><circle cx="21.9" cy="10.4" r="2.3"/>
+      <path fill-rule="evenodd" d="M14 4.2c4.7 0 8.3 3.4 8.3 7.6s-3.6 7.6-8.3 7.6-8.3-3.4-8.3-7.6S9.3 4.2 14 4.2Z M9.6 10.7a1.4 1.4 0 1 0 2.8 0 1.4 1.4 0 1 0-2.8 0Z M15.6 10.7a1.4 1.4 0 1 0 2.8 0 1.4 1.4 0 1 0-2.8 0Z M12.3 13.7a1.7 1.15 0 1 0 3.4 0 1.7 1.15 0 1 0-3.4 0Z"/>
+    </g>
+</svg>

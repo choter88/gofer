@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Gofer logo, round seven</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=IBM+Plex+Mono:wght@400;500&family=Saira+Stencil+One&family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F0EBE1;--paper-2:#F8F5EF;--ink:#17150F;--ink-3:#635E51;--rule:#CDC5B4;--accent:#9C3A1B;--accent-ink:#D9713F}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 13px/1.5 "Libre Franklin",Helvetica,Arial,sans-serif;padding:40px}
+h1{font:900 34px/1 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 6px}
+.lede{color:var(--ink-3);font:400 12px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.dir{padding:22px 0;border-top:1px solid var(--rule)}
+.dir h2{font:900 22px/1.05 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 6px}
+.dir h2 small{font:500 10px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-right:10px}
+.dir p{color:var(--ink-3);font-size:12px;line-height:1.5;margin:0 0 12px;max-width:52ch}
+.row{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}
+.tile{display:grid;place-items:center;border:1px solid var(--rule);border-radius:3px;background:var(--paper-2);color:var(--ink)}
+.tile.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tile.rust{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.tile.big{width:120px;height:120px}.tile.big svg{width:84px;height:84px}
+.tile.md{width:64px;height:64px}.tile.md svg{width:44px;height:44px}
+.tile.sm{width:40px;height:40px}.tile.sm svg{width:24px;height:24px}
+.tile.xs{width:30px;height:30px}.tile.xs svg{width:16px;height:16px}
+.lock{display:flex;align-items:center;gap:.3em;font:900 40px/1 Fraunces,Georgia,serif;letter-spacing:-.025em;font-variation-settings:"opsz" 144;margin-top:12px}
+.lock svg{height:.95em;width:.95em}.lock .dot{color:var(--accent)}
+svg{display:block;fill:currentColor}
+.st{fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.stencil{font-family:"Big Shoulders Stencil Display","Saira Stencil One",Impact,sans-serif;font-weight:900;color:var(--accent);font-size:64px;line-height:1;letter-spacing:.04em;display:inline-flex;align-items:center;gap:14px}
+.stencil.ink{color:var(--ink);font-size:34px}
+.stencil .box{display:grid;place-items:center;width:64px;height:64px;border:3px solid currentColor;font-size:44px;letter-spacing:0}
+.stencil .box.fill{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.stencil .fav{width:30px;height:30px;font-size:22px;border-radius:4px;background:var(--ink);color:var(--paper);display:grid;place-items:center;letter-spacing:0}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- U: tally -->
+  <symbol id="u" viewBox="0 0 32 32">
+    <rect x="4.6" y="6" width="2.8" height="20" rx=".7"/><rect x="10.6" y="6" width="2.8" height="20" rx=".7"/>
+    <rect x="16.6" y="6" width="2.8" height="20" rx=".7"/><rect x="22.6" y="6" width="2.8" height="20" rx=".7"/>
+    <path d="M2.6 24.2 27.2 7.6" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  </symbol>
+  <!-- V: pencil stub -->
+  <symbol id="v" viewBox="0 0 32 32">
+    <path fill-rule="evenodd" d="M11 3.2h10a1.2 1.2 0 0 1 1.2 1.2V19H9.8V4.4A1.2 1.2 0 0 1 11 3.2ZM9.8 6.6h12.4v1.2H9.8Zm0 2.4h12.4v1.2H9.8Z"/>
+    <path d="M9.8 20.2h12.4L16 29.6Z"/>
+    <path d="M14.6 25.9h2.8L16 29.6Z" fill="var(--paper)"/>
+  </symbol>
+  <!-- W: banker's lamp -->
+  <symbol id="w" viewBox="0 0 32 32">
+    <path d="M4 14.6V12a12 6.4 0 0 1 24 0v2.6Z"/>
+    <rect x="14.8" y="14.6" width="2.4" height="11"/>
+    <rect x="7" y="25.4" width="18" height="2.8" rx=".9"/>
+    <rect x="22.2" y="14.6" width="1.3" height="4.4"/><circle cx="22.85" cy="20" r="1.2"/>
+  </symbol>
+  <!-- X: hand truck -->
+  <symbol id="x" viewBox="0 0 32 32">
+    <rect x="20.6" y="3" width="2.6" height="21"/>
+    <rect x="17" y="2.6" width="9.6" height="2.6" rx="1"/>
+    <rect x="7" y="22.4" width="15.6" height="2.6" rx=".6"/>
+    <path fill-rule="evenodd" d="M21.9 23.4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 1 0 0-7.2Zm0 2.2a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 1 1 0-2.8Z"/>
+    <rect x="8" y="14.4" width="11.6" height="7.2" rx=".6"/>
+    <rect x="8.8" y="7" width="10" height="6.4" rx=".6"/>
+  </symbol>
+  <!-- Y: bill spike -->
+  <symbol id="y" viewBox="0 0 32 32">
+    <rect x="7" y="25.2" width="18" height="3.2" rx="1.6"/>
+    <path d="M16 2.4 17.7 25.4h-3.4Z"/>
+    <g transform="rotate(-6 16 16)"><rect x="6.5" y="19.4" width="19" height="2.4" rx=".5"/></g>
+    <g transform="rotate(5 16 16)"><rect x="6.8" y="15.2" width="19" height="2.4" rx=".5"/></g>
+    <g transform="rotate(-4 16 16)"><rect x="7.2" y="11" width="19" height="2.4" rx=".5"/></g>
+  </symbol>
+  <!-- Z: apron -->
+  <symbol id="z" viewBox="0 0 32 32">
+    <path class="st" d="M11.6 6.4a4.4 4.4 0 0 1 8.8 0"/>
+    <path fill-rule="evenodd" d="M11 5.8h10v6.4h5.6l-1.4 15.2a1.6 1.6 0 0 1-1.6 1.4H8.4a1.6 1.6 0 0 1-1.6-1.4L5.4 12.2H11ZM12.4 17.2h7.2v5.2h-7.2Z"/>
+    <path class="st" d="M5.6 13.2 2.2 15.6M26.4 13.2l3.4 2.4"/>
+  </symbol>
+  <!-- AB: filing cabinet -->
+  <symbol id="ab" viewBox="0 0 32 32">
+    <path fill-rule="evenodd" d="M8.2 2.6h15.6a1.4 1.4 0 0 1 1.4 1.4v24a1.4 1.4 0 0 1-1.4 1.4H8.2a1.4 1.4 0 0 1-1.4-1.4V4a1.4 1.4 0 0 1 1.4-1.4ZM6.8 15.4h18.4v1.2H6.8ZM12.6 8.4h6.8v2h-6.8Zm0 12.6h6.8v2h-6.8Z"/>
+  </symbol>
+</svg>
+
+<h1>Gofer logo, round seven</h1>
+<p class="lede">Eight more, none seen before</p>
+
+<div class="grid">
+
+<div class="dir"><h2><small>U</small>The tally</h2><p>Four strokes and a slash: the oldest way of keeping count of work done. Abstract, instantly readable, and it means "one more finished" without a word.</p>
+<div class="row"><div class="tile big"><svg><use href="#u"/></svg></div><div class="tile big dark"><svg><use href="#u"/></svg></div><div class="tile md"><svg><use href="#u"/></svg></div><div class="tile sm"><svg><use href="#u"/></svg></div><div class="tile xs"><svg><use href="#u"/></svg></div><div class="tile xs dark"><svg><use href="#u"/></svg></div></div>
+<div class="lock"><svg><use href="#u"/></svg>Gofer<span class="dot">.</span></div></div>
+
+<div class="dir"><h2><small>V</small>The pencil stub</h2><p>A pencil worn down to a stub. Grunt work, and the thing that never complains about doing it. Small, humble, sharp.</p>
+<div class="row"><div class="tile big"><svg><use href="#v"/></svg></div><div class="tile big dark"><svg><use href="#v"/></svg></div><div class="tile md"><svg><use href="#v"/></svg></div><div class="tile sm"><svg><use href="#v"/></svg></div><div class="tile xs"><svg><use href="#v"/></svg></div><div class="tile xs dark"><svg><use href="#v"/></svg></div></div>
+<div class="lock"><svg><use href="#v"/></svg>Gofer<span class="dot">.</span></div></div>
+
+<div class="dir"><h2><small>W</small>The banker's lamp</h2><p>The green-shaded desk lamp that is still on after everyone has gone home. Never gets tired, in one object.</p>
+<div class="row"><div class="tile big"><svg><use href="#w"/></svg></div><div class="tile big dark"><svg><use href="#w"/></svg></div><div class="tile md"><svg><use href="#w"/></svg></div><div class="tile sm"><svg><use href="#w"/></svg></div><div class="tile xs"><svg><use href="#w"/></svg></div><div class="tile xs dark"><svg><use href="#w"/></svg></div></div>
+<div class="lock"><svg><use href="#w"/></svg>Gofer<span class="dot">.</span></div></div>
+
+<div class="dir"><h2><small>X</small>The hand truck</h2><p>The gofer's hauling tool. Load it up, wheel it off, come back empty. Says "I carry the heavy boring stuff" to a contractor and a dentist alike.</p>
+<div class="row"><div class="tile big"><svg><use href="#x"/></svg></div><div class="tile big dark"><svg><use href="#x"/></svg></div><div class="tile md"><svg><use href="#x"/></svg></div><div class="tile sm"><svg><use href="#x"/></svg></div><div class="tile xs"><svg><use href="#x"/></svg></div><div class="tile xs dark"><svg><use href="#x"/></svg></div></div>
+<div class="lock"><svg><use href="#x"/></svg>Gofer<span class="dot">.</span></div></div>
+
+<div class="dir"><h2><small>Y</small>The bill spike</h2><p>The spindle on a shop counter where finished paperwork gets skewered. It is the done pile, and it has a little edge to it.</p>
+<div class="row"><div class="tile big"><svg><use href="#y"/></svg></div><div class="tile big dark"><svg><use href="#y"/></svg></div><div class="tile md"><svg><use href="#y"/></svg></div><div class="tile sm"><svg><use href="#y"/></svg></div><div class="tile xs"><svg><use href="#y"/></svg></div><div class="tile xs dark"><svg><use href="#y"/></svg></div></div>
+<div class="lock"><svg><use href="#y"/></svg>Gofer<span class="dot">.</span></div></div>
+
+<div class="dir"><h2><small>Z</small>The apron</h2><p>The shop assistant's apron. A person, without a face: whoever is wearing this is here to help and not afraid of a mess.</p>
+<div class="row"><div class="tile big"><svg><use href="#z"/></svg></div><div class="tile big dark"><svg><use href="#z"/></svg></div><div class="tile md"><svg><use href="#z"/></svg></div><div class="tile sm"><svg><use href="#z"/></svg></div><div class="tile xs"><svg><use href="#z"/></svg></div><div class="tile xs dark"><svg><use href="#z"/></svg></div></div>
+<div class="lock"><svg><use href="#z"/></svg>Gofer<span class="dot">.</span></div></div>
+
+<div class="dir"><h2><small>AA</small>The crate stencil</h2><p>A different voice entirely: the shipping stencil sprayed on a crate. Warehouse, not boardroom. The G in a box is the favicon.</p>
+<div class="stencil"><span>GOFER</span><span class="box">G</span><span class="box fill">G</span><span class="fav">G</span></div>
+<div class="stencil ink" style="margin-top:10px"><span>GOFER</span><span style="font:400 11px/1 'IBM Plex Mono',Menlo,monospace;color:var(--ink-3);letter-spacing:.02em">grunt work, by email</span></div></div>
+
+<div class="dir"><h2><small>AB</small>The filing cabinet</h2><p>"Filing, chasing and retyping" is your own line. This is the first of those, as a two-drawer cabinet. Plain, sturdy, unmistakable at any size.</p>
+<div class="row"><div class="tile big"><svg><use href="#ab"/></svg></div><div class="tile big dark"><svg><use href="#ab"/></svg></div><div class="tile md"><svg><use href="#ab"/></svg></div><div class="tile sm"><svg><use href="#ab"/></svg></div><div class="tile xs"><svg><use href="#ab"/></svg></div><div class="tile xs dark"><svg><use href="#ab"/></svg></div></div>
+<div class="lock"><svg><use href="#ab"/></svg>Gofer<span class="dot">.</span></div></div>
+
+</div>
+</body></html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Gofer logo, round five</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F0EBE1;--paper-2:#F8F5EF;--ink:#17150F;--ink-3:#635E51;--rule:#CDC5B4;--accent:#9C3A1B;--accent-ink:#D9713F}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 13px/1.5 "Libre Franklin",Helvetica,Arial,sans-serif;padding:40px}
+h1{font:900 34px/1 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 6px}
+.lede{color:var(--ink-3);font:400 12px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;margin:0 0 30px}
+.dir{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:26px 0;border-top:1px solid var(--rule);align-items:start}
+.dir h2{font:900 25px/1.05 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 8px}
+.dir h2 small{display:block;font:500 10px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.dir p{color:var(--ink-3);font-size:12.5px;line-height:1.5;margin:0}
+.row{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+.tile{display:grid;place-items:center;border:1px solid var(--rule);border-radius:3px;background:var(--paper-2);color:var(--ink)}
+.tile.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tile.rust{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.tile.big{width:150px;height:150px}.tile.big svg{width:104px;height:104px}
+.tile.md{width:72px;height:72px}.tile.md svg{width:48px;height:48px}
+.tile.sm{width:44px;height:44px}.tile.sm svg{width:24px;height:24px}
+.tile.xs{width:32px;height:32px}.tile.xs svg{width:16px;height:16px}
+.lock{display:flex;align-items:center;gap:.3em;font:900 60px/1 Fraunces,Georgia,serif;letter-spacing:-.025em;font-variation-settings:"opsz" 144;margin-top:18px}
+.lock svg{height:.95em;width:.95em}.lock .dot{color:var(--accent)}
+svg{display:block;fill:currentColor}
+.st{fill:none;stroke:currentColor;stroke-width:3.2;stroke-linecap:butt;stroke-linejoin:miter}
+/* stamp */
+.stamps{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.stamp{display:inline-grid;gap:4px;justify-items:center;border:2.5px solid var(--accent);color:var(--accent);padding:12px 18px 11px;border-radius:3px;transform:rotate(-2deg);
+  font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:"opsz" 144;line-height:1;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 -1.4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");mask-size:110px}
+.stamp .w{font-size:44px;letter-spacing:.02em}
+.stamp .s{font:500 9.5px/1 "IBM Plex Mono",Menlo,monospace;letter-spacing:.22em;text-transform:uppercase;border-top:1.5px solid currentColor;padding-top:6px;width:100%;text-align:center}
+.stamp.ink{border-color:var(--ink);color:var(--ink)}
+.stamp.small{padding:8px 12px 7px;gap:3px}.stamp.small .w{font-size:26px}.stamp.small .s{font-size:7.5px;letter-spacing:.18em}
+.fav{width:32px;height:32px;border-radius:5px;background:var(--ink);display:grid;place-items:center}
+.fav span{font:900 20px/1 Fraunces,Georgia,serif;color:var(--paper);font-variation-settings:"opsz" 144;transform:translateY(-1px)}
+.fav.rust{background:var(--accent)}
+.fav.big{width:72px;height:72px;border-radius:10px}.fav.big span{font-size:46px}
+.fav.box{background:none;border:2px solid var(--accent)}.fav.box span{color:var(--accent)}
+/* wordmark */
+.wm{font:900 72px/1 Fraunces,Georgia,serif;letter-spacing:-.025em;font-variation-settings:"opsz" 144;margin-top:6px}
+.wm .m{color:var(--accent);margin:0 .02em}
+.wm .dot{color:var(--accent)}
+.wm.dark{background:var(--ink);color:var(--paper);padding:20px 26px;border-radius:3px;display:inline-block;margin-top:14px}
+.wm.dark .m,.wm.dark .dot{color:var(--accent-ink)}
+.small-wm{font:900 22px/1 Fraunces,Georgia,serif;letter-spacing:-.02em;margin-top:14px;color:var(--ink)}
+.small-wm .m{color:var(--accent)}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- M: in tray, out tray -->
+  <symbol id="m" viewBox="0 0 32 32">
+    <path class="st" d="M4 6.5v7.5h24V6.5"/>
+    <path class="st" d="M4 18v7.5h24V18"/>
+    <rect x="9" y="3" width="14" height="2.4"/>
+    <rect x="9" y="7.6" width="14" height="2.4"/>
+    <rect x="9" y="19.5" width="14" height="2.4"/>
+  </symbol>
+  <!-- N: a stack of paper that walks -->
+  <symbol id="n" viewBox="0 0 32 32">
+    <rect x="6.5" y="3" width="19" height="2.6" rx=".6"/>
+    <rect x="5.5" y="6.6" width="19" height="2.6" rx=".6"/>
+    <rect x="7" y="10.2" width="19" height="2.6" rx=".6"/>
+    <rect x="6" y="13.8" width="19" height="2.6" rx=".6"/>
+    <rect x="6.8" y="17.4" width="19" height="2.6" rx=".6"/>
+    <rect x="6" y="21" width="19" height="2.6" rx=".6"/>
+    <path d="M11.2 23.6h2.8v4.2h1.6v1.8h-4.4zM18 23.6h2.8v4.2h1.6v1.8H18z"/>
+  </symbol>
+</svg>
+
+<h1>Gofer logo, round five</h1>
+<p class="lede">No animal, no arrow. Three from the old paper office, one from the name itself</p>
+
+<div class="dir">
+  <div><h2><small>Direction M</small>In tray, out tray</h2><p>Before there was an inbox there were two wire trays on a desk. Work goes in the top one and comes out of the bottom one finished. It is where Gofer literally lives, and nobody else in software draws it.</p></div>
+  <div>
+    <div class="row">
+      <div class="tile big"><svg><use href="#m"/></svg></div>
+      <div class="tile big dark"><svg><use href="#m"/></svg></div>
+      <div class="tile md"><svg><use href="#m"/></svg></div>
+      <div class="tile sm"><svg><use href="#m"/></svg></div>
+      <div class="tile xs"><svg><use href="#m"/></svg></div>
+      <div class="tile xs dark"><svg><use href="#m"/></svg></div>
+      <div class="tile md rust"><svg><use href="#m"/></svg></div>
+    </div>
+    <div class="lock"><svg><use href="#m"/></svg>Gofer<span class="dot">.</span></div>
+  </div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction N</small>The stack that walks</h2><p>The junior employee who never gets tired of paperwork, drawn as the paperwork. A stack so tall you only see the legs. Dry, a little funny, and not a mascot.</p></div>
+  <div>
+    <div class="row">
+      <div class="tile big"><svg><use href="#n"/></svg></div>
+      <div class="tile big dark"><svg><use href="#n"/></svg></div>
+      <div class="tile md"><svg><use href="#n"/></svg></div>
+      <div class="tile sm"><svg><use href="#n"/></svg></div>
+      <div class="tile xs"><svg><use href="#n"/></svg></div>
+      <div class="tile xs dark"><svg><use href="#n"/></svg></div>
+      <div class="tile md rust"><svg><use href="#n"/></svg></div>
+    </div>
+    <div class="lock"><svg><use href="#n"/></svg>Gofer<span class="dot">.</span></div>
+  </div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction O</small>The rubber stamp</h2><p>Your site already has a stamp on the hero. Make it the identity. Every finished job gets stamped, the mark is the impression, and the favicon is the stamp's own G. Ink on paper, slightly crooked, the way a real one lands.</p></div>
+  <div>
+    <div class="stamps">
+      <div class="stamp"><span class="w">GOFER</span><span class="s">Done</span></div>
+      <div class="stamp ink"><span class="w">GOFER</span><span class="s">Received</span></div>
+      <div class="stamp small"><span class="w">GOFER</span><span class="s">Grunt work, by email</span></div>
+      <div class="fav big"><span>G</span></div>
+      <div class="fav"><span>G</span></div>
+      <div class="fav rust"><span>G</span></div>
+      <div class="fav box"><span>G</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="dir">
+  <div><h2><small>Direction P</small>Go·fer</h2><p>No symbol at all. The name is the logo, and one rust dot in the middle teaches people how to say it and what it means: go-fer, the one who goes for things. The period you already use moves inside the word.</p></div>
+  <div>
+    <div class="wm">Go<span class="m">·</span>fer</div>
+    <div class="wm dark">Go<span class="m">·</span>fer</div>
+    <div class="small-wm">Go<span class="m">·</span>fer &nbsp; <span style="font:400 11px/1 'IBM Plex Mono',Menlo,monospace;color:var(--ink-3);letter-spacing:.02em">grunt work, by email</span></div>
+  </div>
+</div>
+
+</body></html>
