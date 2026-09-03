@@ -121,6 +121,35 @@ svg{display:block}
 .foot .qr{margin-left:auto;display:flex;align-items:center;gap:10px}
 .foot .qr svg{width:60px;height:60px;padding:4px;background:#fff;border:1px solid var(--rule)}
 .foot .qr .l{font:500 9px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:right}
+
+/* ---------- side two: the numbers ---------- */
+@media screen{.page+.page{margin-top:24px}}
+@media print{.page-2{break-before:page}}
+.p2 .act{padding-top:8px}
+.p2 .act h2{font-size:22px;max-width:none}
+.p2 .sub{max-width:60ch}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.tile{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:9px 14px 8px;display:flex;flex-direction:column}
+.tile .big{font-family:var(--display);font-weight:900;font-size:40px;line-height:.95;letter-spacing:-.03em;color:var(--ink);font-variation-settings:"opsz" 144}
+.tile .big small{font-size:19px;font-weight:700;letter-spacing:-.01em;margin-left:2px}
+.tile .lab{font-size:12px;line-height:1.38;color:var(--ink);margin-top:6px}
+.tile .also{font-size:11px;line-height:1.38;color:var(--ink-2);margin-top:4px}
+.tile .also b{color:var(--ink);font-weight:700}
+.tile .src{margin-top:auto;padding-top:6px;font:400 8.5px/1.35 var(--mono);color:var(--ink-3)}
+/* the gap: two bars, one fact */
+.gap{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;align-items:center;margin-top:9px}
+.gap .gl{font:500 8.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.gap .bar{height:12px;border-radius:2px;background:var(--rule-soft);position:relative}
+.gap .bar i{position:absolute;inset:0 auto 0 0;border-radius:2px;background:var(--ink)}
+.gap .bar.acc i{background:var(--accent)}
+.gap .bar b{position:absolute;left:calc(var(--v) + 8px);top:50%;transform:translateY(-50%);font:500 9.5px/1 var(--mono);color:var(--ink)}
+.gap-cap{font:400 8.5px/1.35 var(--mono);color:var(--ink-3);margin-top:5px}
+.close{margin-top:8px;padding:7px 14px;border-left:3px solid var(--accent);font-family:var(--display);font-weight:700;font-size:16.5px;line-height:1.25;letter-spacing:-.01em}
+.p2 .foot{display:block}
+.p2 .foot .mono{font-size:12px}
+.sources{margin-top:6px;columns:2;column-gap:24px;font:400 8.3px/1.45 var(--mono);color:var(--ink-3)}
+.sources p{break-inside:avoid;margin:0 0 3px}
+.sources b{color:var(--ink-2);font-weight:500}
 </style>
 </head>
 <body>
@@ -237,5 +266,94 @@ svg{display:block}
   </footer>
 
 </main>
+
+<section class="page page-2 p2" aria-label="Side two: the numbers">
+
+  <header class="head">
+    <span class="brand">Gofer<span>.</span></span>
+    <span class="note">the numbers behind it</span>
+    <span class="url">tellgofer.com</span>
+  </header>
+
+  <!-- 01 THE GAP -->
+  <section class="act">
+    <div class="act-head"><span class="n">01</span><span class="lbl">The gap</span></div>
+    <h2>Businesses aren't using AI. Their employees already are.</h2>
+    <p class="sub">The people who won't touch the tool the company bought already use AI on their own.</p>
+    <div class="gap">
+      <span class="gl">Businesses using AI</span>
+      <div class="bar" style="--v:20%"><i style="width:20%"></i><b>20%</b></div>
+      <span class="gl">Employees using AI at work</span>
+      <div class="bar acc" style="--v:52%"><i style="width:52%"></i><b>52%</b></div>
+    </div>
+    <p class="gap-cap">U.S. Census Bureau BTOS, May 2026 (AI used to produce goods or services). Gallup, May 2026, 22,573 U.S. employees.</p>
+    <div class="tiles">
+      <div class="tile">
+        <div class="big">&lt;20<small>%</small></div>
+        <div class="lab">of firms with four or fewer employees use AI. Among firms with 250 or more, it's 37%.</div>
+        <div class="also">Use rose at firms with 20+ employees over the last six months. It <b>did not change</b> at firms under 20.</div>
+        <div class="src">U.S. Census Bureau, Business Trends and Outlook Survey, Dec 2025 to May 2026</div>
+      </div>
+      <div class="tile">
+        <div class="big">15<small>%</small></div>
+        <div class="lab">of U.S. employees use AI at work every day. 30% use it a few times a week or more.</div>
+        <div class="also">Only <b>47%</b> say their organization has integrated AI tools. <b>20%</b> aren't sure.</div>
+        <div class="src">Gallup, May 6 to 20, 2026, 22,573 employed U.S. adults</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 THE REASON -->
+  <section class="act">
+    <div class="act-head"><span class="n">02</span><span class="lbl">The reason</span></div>
+    <h2>It's a learning problem as much as a buying problem.</h2>
+    <div class="tiles">
+      <div class="tile">
+        <div class="big">36<small>%</small></div>
+        <div class="lab">of employees feel they've had adequate upskilling for AI.</div>
+        <div class="also"><b>66%</b> say they get limited or no guidance on how to use it.</div>
+        <div class="src">BCG, AI at Work, June 2026, about 12,000 employees, managers and leaders</div>
+      </div>
+      <div class="tile">
+        <div class="big">14<small>%</small></div>
+        <div class="lab">of small businesses have AI embedded in their core operations, even though 76% use it somewhere.</div>
+        <div class="also"><b>73%</b> say they'd benefit from more training and implementation help.</div>
+        <div class="src">Goldman Sachs 10,000 Small Businesses Voices, Jan 27 to Feb 4, 2026, 1,256 owners, all 50 states</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 THE PRIZE -->
+  <section class="act">
+    <div class="act-head"><span class="n">03</span><span class="lbl">The prize</span></div>
+    <h2>The grunt work is real, and it's measurable.</h2>
+    <div class="tiles">
+      <div class="tile">
+        <div class="big">25<small>hrs</small></div>
+        <div class="lab">a week spent on manual data entry and reconciling data across apps, per business.</div>
+        <div class="src">Intuit QuickBooks Business Solutions Survey, Aug 2024, 630 U.S. businesses with 10 to 99 employees</div>
+      </div>
+      <div class="tile">
+        <div class="big">54<small>%</small></div>
+        <div class="lab">of small business owners say paperwork gets in the way of running the business. They average 11 hours a week on admin.</div>
+        <div class="src">American Express and Small Business Saturday UK, SME Barometer, July 2026, 1,000 UK owners</div>
+      </div>
+    </div>
+    <p class="close">Gofer doesn't ask your staff to learn a tool. It asks them to send an email.</p>
+  </section>
+
+  <footer class="foot">
+    <div class="mono">hello@tellgofer.com<span>tellgofer.com</span></div>
+    <div class="sources">
+      <p><b>Census Bureau</b> census.gov/library/stories/2026/05/ai-use-businesses.html</p>
+      <p><b>Gallup</b> gallup.com/workplace/712736</p>
+      <p><b>BCG</b> bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools</p>
+      <p><b>Goldman Sachs</b> goldmansachs.com/community-transformation/10000-small-businesses-voices</p>
+      <p><b>Intuit QuickBooks</b> erp.intuit.com/blog/research/business-solutions-survey-2024</p>
+      <p><b>American Express UK</b> SME Business Barometer, July 2026</p>
+    </div>
+  </footer>
+
+</section>
 </body>
 </html>
